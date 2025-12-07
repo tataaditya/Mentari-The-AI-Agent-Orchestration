@@ -1,0 +1,208 @@
+/* ==========================================================================
+   MENTARI V.19 - ULTIMATE GLASSMORPHISM (FIXED)
+   File: style.css
+   ========================================================================== */
+
+/* 1. PASANG BACKGROUND DI LAPISAN PALING BAWAH (BODY) */
+body {
+    /* PERBAIKAN 1: Ganti backslash (\) dengan forward slash (/) */
+    /* PERBAIKAN 2: Tambahkan leading slash (/) */
+    background-image: url('http://localhost:8000/public/mentari(2).png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a1a2e !important; /* Fallback color lebih bagus */
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* 2. BUAT ELEMEN UTAMA TRANSPARAN (Supaya background terlihat) */
+#root, 
+.cl-app-wrapper, 
+.MuiBox-root, 
+main {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 3. BUAT HEADER SEMI-TRANSPARAN */
+header, 
+.cl-header {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. PERCANTIK AREA CHAT (GLASS EFFECT) */
+/* Pesan User (Biru Transparan) */
+.user-message,
+.step-user {
+    background: rgba(59, 130, 246, 0.85) !important; /* Biru */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Pesan Mentari (Putih Transparan) */
+.assistant-message,
+.step-assistant {
+    background: rgba(255, 255, 255, 0.85) !important; /* Putih */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #1a1a2e !important;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* System Messages */
+.step-system {
+    background: rgba(156, 163, 175, 0.7) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 8px 12px;
+    margin: 8px 0;
+}
+
+/* Kotak Input (Paling Bawah) */
+.cl-input-container,
+#chat-input-container {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+}
+
+/* 5. TOMBOL UPLOAD & INPUT (Agar tetap terlihat jelas) */
+#chat-input,
+textarea#chat-input {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    color: #1a1a2e;
+}
+
+#chat-input:focus,
+textarea#chat-input:focus {
+    background: white !important;
+    border-color: rgba(59, 130, 246, 0.5);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Upload Button */
+button[type="button"],
+.upload-button {
+    background: rgba(59, 130, 246, 0.9) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+button[type="button"]:hover,
+.upload-button:hover {
+    background: rgba(59, 130, 246, 1) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* 6. OVERLAY GELAP (Agar teks terbaca) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Lapisan hitam transparan 30% */
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 7. SCROLLBAR STYLING */
+::-webkit-scrollbar {
+    width: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.6);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.9);
+}
+
+/* 8. LOADING INDICATORS */
+.step-loading {
+    background: rgba(156, 163, 175, 0.5) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+
+/* 9. FILE UPLOAD AREA */
+.file-upload-area {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px dashed rgba(59, 130, 246, 0.5);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.file-upload-area:hover {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(59, 130, 246, 0.8);
+    transform: scale(1.02);
+}
+
+/* 10. SIDEBAR (jika ada) */
+.cl-sidebar,
+aside {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 11. MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Better performance on mobile */
+    }
+    
+    .user-message,
+    .assistant-message {
+        max-width: 90%;
+        font-size: 14px;
+    }
+}
