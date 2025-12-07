@@ -15,35 +15,35 @@ Mentari is an AI-powered automation assistant designed to orchestrate multiple p
 🛠️ Capabilities
 📝 Microsoft Word
 
-Create and edit .docx files
+- Create and edit .docx files
 
-Add headings, tables, and structured content
+- Add headings, tables, and structured content
 
-Apply formatting and modify document structure
+- Apply formatting and modify document structure
 
 📊 Microsoft Excel
 
-Create and update workbook files
+- Create and update workbook files
 
-Perform data analysis
+- Perform data analysis
 
-Read/write cells using Pandas or OpenPyXL
+- Read/write cells using Pandas or OpenPyXL
 
 📄 PDF & Filesystem
 
-Extract text from PDF files
+- Extract text from PDF files
 
-List, move, and rename files in a secure sandbox
+- List, move, and rename files in a secure sandbox
 
-Support for structured file workflows
+- Support for structured file workflows
 
 🌐 Social Media & Web Automation
 
-Automated messaging and file upload
+- Automated messaging and file upload
 
-Supports WhatsApp Web and Discord
+- Supports WhatsApp Web and Discord
 
-Powered by Selenium (requires Chrome Debug Mode)
+- Powered by Selenium (requires Chrome Debug Mode)
 
 | Component        | Role in the System                        |
 |------------------|--------------------------------------------|
