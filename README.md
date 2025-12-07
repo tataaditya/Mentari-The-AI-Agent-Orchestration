@@ -5,6 +5,12 @@
 Mentari is an AI-powered automation assistant designed to orchestrate multiple productivity tools through isolated processes. It integrates document automation, file handling, and controlled web interactions under one unified system.
 
 ## Please clone the MCP server you’ve chosen into your Environtment
+### MCP Servers Used
+
+- [Office Word MCP Server](https://github.com/GongRzhe/Office-Word-MCP-Server.git)
+- [Excel MCP Server](https://github.com/haris-musa/excel-mcp-server.git)
+- [Office PowerPoint MCP Server](https://github.com/GongRzhe/Office-PowerPoint-MCP-Server.git)
+- [Filesystem MCP Server](https://github.com/modelcontextprotocol/servers.git)
 
 🛠️ Capabilities
 📝 Microsoft Word
