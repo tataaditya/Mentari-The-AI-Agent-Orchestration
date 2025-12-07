@@ -1,5 +1,7 @@
 # Mentari-The-AI-Agent-Orchestration
 
+![Screenshot](public/Screenshot%202025-12-07%20180632.png)
+
 Mentari is an AI-powered automation assistant designed to orchestrate multiple productivity tools through isolated processes. It integrates document automation, file handling, and controlled web interactions under one unified system.
 
 ## Please clone the MCP server you’ve chosen into your Environtment
